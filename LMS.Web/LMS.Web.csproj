@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <UserSecretsId>9a949261-74a4-49fc-b8c6-4801c5069b8c</UserSecretsId>
+    <StartupObject>LMS.Web.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\NewFile.txt" />
+    <None Remove="Views\Shared\NewFile1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Basic\CreateLinks.cshtml" />
+    <None Include="Views\Basic\CreateRole.cshtml" />
+    <None Include="Views\Basic\PageLink.cshtml" />
+    <None Include="Views\Basic\PageRole.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.12.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.Repository\LMS.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
